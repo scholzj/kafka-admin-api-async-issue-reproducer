@@ -3,7 +3,6 @@ package cz.scholz.sandbox.kafka;
 import org.apache.kafka.clients.admin.Admin;
 import org.apache.kafka.clients.admin.AdminClient;
 import org.apache.kafka.clients.admin.AdminClientConfig;
-import org.apache.kafka.common.config.SslConfigs;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
@@ -14,7 +13,7 @@ import java.util.concurrent.CountDownLatch;
 public class AdminApiClientAsyncTest {
     @Test
     @Timeout(value = 60)
-    public void testFreecode() throws InterruptedException {
+    public void testAsyncExecution() throws InterruptedException {
         CountDownLatch latch = new CountDownLatch(1);
         Admin admin = adminClient();
 
